@@ -11,10 +11,11 @@ public class MultiplicationGrid {
         try {
             generateGrid(Integer.parseInt(args[0]));
         } catch (NumberFormatException e){
-           e.printStackTrace();
-        } catch (ArrayIndexOutOfBoundsException e2){
-            e2.printStackTrace();
+           throw new NumberFormatException("Please enter a valid number");
         }
+        catch (ArrayIndexOutOfBoundsException e){
+           throw new ArrayIndexOutOfBoundsException("Please enter the parameter");
+        } 
 
     }
 
